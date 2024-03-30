@@ -25,7 +25,7 @@ sed '1s;^;#!/usr/bin/env node\n\n;' ./dist/index.js > ./dist/executable.js
 mkdir -p $HOME/Documents/scripts/ && cp -i ./dist/executable.js $HOME/Documents/scripts/$FILENAME
 
 # Устанавливаем права только для просмотра
-# chmod -R 400 $HOME/Documents/scripts/$FILENAME
+chmod -R 400 $HOME/Documents/scripts/$FILENAME
 
 # Устанавливает права на выполнение файла
 chmod +x $HOME/Documents/scripts/$FILENAME

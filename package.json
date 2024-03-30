@@ -1,20 +1,20 @@
 {
   "name": "ts-cmd-tools",
   "version": "0.0.1",
-  "createdAt": "2023-11-07T09:00:00.000Z",
-  "updatedAt": "2023-11-13T19:00:00.000Z",
+  "createdAt": "2024-03-30T09:00:00.000Z",
+  "updatedAt": "2024-03-30T19:00:00.000Z",
   "private": true,
   "description": "A starter kit for creating scripts to run in the terminal",
   "main": "src/index.ts",
   "scripts": {
     "dev": "tsup src/index.ts --watch --onSuccess 'node dist/index.js'",
-    "test": "vitest run",
     "build": "tsup",
     "deploy": "sh ./scripts/deploy.sh",
     "buildexec": "tsup && npx pkg ./dist/index.js --out-path ./dist/bin -t node16-linux --debug",
-    "lint": "tsc",
+    "postinstall": "husky",
     "ci": "pnpm lint && pnpm test && pnpm build",
-    "postinstall": "husky"
+    "test": "vitest run",
+    "lint": "tsc"
   },
   "keywords": [],
   "author": "",
